@@ -1,0 +1,197 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"
+dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots"
+        content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap"
+        rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css"
+        href="{% static 'vendor/spinkit.css' %}"
+        rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css"
+        href="{% static 'vendor/perfect-scrollbar.css' %}"
+        rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css"
+        href="{% static 'css/material-icons.css' %}"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css"
+        href="{% static 'css/fontawesome.css' %}"
+        rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css"
+        href="{% static 'css/preloader.css' %}"
+        rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css"
+        href="{% static 'css/app.css' %}"
+        rel="stylesheet">
+
+    <!-- Content style -->
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+
+    <!-- Base css -->
+    {% include 'snippets/base_css.html' %}
+
+
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <!--<div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+
+    <div class="sk-plane"></div>
+
+        <div class="sk-bounce">
+            <div class="sk-bounce-dot"></div>
+            <div class="sk-bounce-dot"></div>
+        </div>
+
+        <div class="sk-wave">
+            <div class="sk-wave-rect"></div>
+            <div class="sk-wave-rect"></div>
+            <div class="sk-wave-rect"></div>
+            <div class="sk-wave-rect"></div>
+            <div class="sk-wave-rect"></div>
+        </div>
+
+        <div class="sk-pulse"></div>
+
+        <div class="sk-flow">
+            <div class="sk-flow-dot"></div>
+            <div class="sk-flow-dot"></div>
+            <div class="sk-flow-dot"></div>
+        </div>
+
+        <div class="sk-swing">
+            <div class="sk-swing-dot"></div>
+            <div class="sk-swing-dot"></div>
+        </div> -->
+
+        <div class="sk-circle">
+            <div class="sk-circle-dot"></div>
+            <div class="sk-circle-dot"></div>
+            <div class="sk-circle-dot"></div>
+            <div class="sk-circle-dot"></div>
+            <div class="sk-circle-dot"></div>
+            <div class="sk-circle-dot"></div>
+            <div class="sk-circle-dot"></div>
+            <div class="sk-circle-dot"></div>
+            <div class="sk-circle-dot"></div>
+            <div class="sk-circle-dot"></div>
+            <div class="sk-circle-dot"></div>
+            <div class="sk-circle-dot"></div>
+        </div>
+
+        <!--<div class="sk-circle-fade">
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+        </div>
+
+        <div class="sk-grid">
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+        </div>
+
+        <div class="sk-fold">
+            <div class="sk-fold-cube"></div>
+            <div class="sk-fold-cube"></div>
+            <div class="sk-fold-cube"></div>
+            <div class="sk-fold-cube"></div>
+        </div>
+
+        <div class="sk-wander">
+            <div class="sk-wander-cube"></div>
+            <div class="sk-wander-cube"></div>
+            <div class="sk-wander-cube"></div>
+        </div> -->
+
+    </div>
+
+
+    <!-- Header -->
+    {% include 'snippets/header.html' %}
+
+    {% block content %}
+    {% endblock content %}
+
+    <!-- Footer -->
+    {% include 'snippets/footer.html' %}
+
+
+
+    <!-- jQuery -->
+    <script src="{% static 'vendor/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'vendor/popper.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap.min.js' %}"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="{% static 'vendor/perfect-scrollbar.min.js' %}"></script>
+
+    <!-- DOM Factory -->
+    <script src="{% static 'vendor/dom-factory.js' %}"></script>
+
+    <!-- MDK -->
+    <script src="{% static 'vendor/material-design-kit.js' %}"></script>
+
+    <!-- Preloader -->
+    <script src="{% static 'js/preloader.js' %}"></script>
+
+    <!-- Base js -->
+    {% include 'snippets/base_js.html' %}
+
+    <!-- Content scripts -->
+    {% block scripts %}{% endblock %}
+
+</body>
+
+</html>

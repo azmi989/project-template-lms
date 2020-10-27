@@ -19,7 +19,8 @@ lib64/
 parts/
 sdist/
 var/
-venv/5`wheels/
+venv/
+wheels/
 pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/

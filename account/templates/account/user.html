@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+LMS | {{request.user}}
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block content %}
+
+<h1>{{request.user}}</h1>
+
+{% block scripts %}
+{% endblock %}
+
+{% endblock content %}
