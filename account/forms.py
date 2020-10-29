@@ -50,7 +50,7 @@ class UserUpdateForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'profile_image', 'hide_email' )
+        fields = '__all__'
 
     def clean_email(self):
         email = self.cleaned_data['email'].lower()

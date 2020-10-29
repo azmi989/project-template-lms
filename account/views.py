@@ -53,8 +53,8 @@ def edit_user_view(request, *args, **kwargs):
 	if not request.user.is_authenticated:
 		return redirect("login")
 	username = kwargs.get("username")
-	user = User.objects.get(pk=username)
-	if user.pk != request.user.pk:
+	user = User.objects.get(username=username)
+	if user.username != request.user.username:
 		return HttpResponse("You cannot edit someone elses profile.")
 	context = {}
 	if request.POST:
