@@ -1,6 +1,6 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark cust-bg-dark sticky sticky-top">
     <!-- Navbar Brand -->
     <a href="{% url 'home' %}" class="navbar-brand mr-16pt">
         <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
@@ -66,30 +66,17 @@
 			</li>
 
 			<!-- Navbar Search -->
-			<li class="nav-item" data-toggle="tooltip" data-title="Search" data-placement="bottom" data-boundary="window">
-				<a href="#" class="nav-link" data-caret="false">
-					<i class="material-icons" data-toggle="modal" data-target="#modalCookie1">search</i>
+			<li class="nav-item dropdown" data-toggle="tooltip" data-title="Community" data-placement="bottom" data-boundary="window">
+				<!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">
+					<i class="material-icons">search</i>
 				</a>
-				<!-- Button trigger modal-->
-				<!--Modal: modalsearch-->
-				<div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-				aria-hidden="true" data-backdrop="true">
-					<div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
-						<!--Content-->
-						<div class="modal-content">
-							<!--Body-->
-							<div class="modal-body">
-								<div class="row d-flex justify-content-center align-items-center">
-									<form class="form-inline my-2 my-lg-0">
-									<input class="form-control mr-sm-2" type="search" size="70" placeholder="Search" aria-label="Search">
-									</form>
-								</div>
-							</div>
-						</div>
-						<!--/.Content-->
-					</div>
+				<form class="form-inline dropdown-menu my-2 my-lg-0">
+					<input class="form-control m-sm-2 p-3" type="search" size="50" placeholder="Search" aria-label="Search ...">
+				</form> -->
+				<div class="searchbar">
+					<input class="search_input" type="text" name="" placeholder="Search...">
+					<a href="#" class="search_icon"><i class="fas fa-search"></i></a>
 				</div>
-				<!--Modal: modalsearch-->
 			</li>
 		</ul>
 
