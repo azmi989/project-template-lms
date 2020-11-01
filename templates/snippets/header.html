@@ -1,18 +1,18 @@
 {% load static %}
 
-    <nav class="flex_row_container navbar_item" id="header">
-        <div class="flex_row_container" id="navbar_logo">
+    <nav class="flex_row_container" id="header">
+        <div class="navbar_item flex_row_container" id="navbar_logo">
             <img class="" src="{% static 'images/logo/black-70@2x.png' %}" id="navbar_icon">
             <h1 class="">LMS</h1>
         </div>
-        <ul class="flex_row_container navbar_item" id="navbar_links_area">
-            <ul><a class="navbar_link" href="#">Home</a></ul>
-            <ul><a class="navbar_link" href="#">Profile</a></ul>
-            <ul><a class="navbar_link" href="#">About us</a></ul>
+        <ul class="navbar_item flex_row_container navbar_item" id="navbar_links_area">
+            <li><a class="navbar_link" href="#">Home</a></li>
+            <li><a class="navbar_link" href="#">Profile</a></li>
+            <li><a class="navbar_link" href="#">About us</a></li>
         </ul>
-        <ul class="flex_row_container navbar_item" id="navbar_account_area">
-            <ul><a class="navbar_link" href="#"><img src="{% static 'images/icon/login-black-18dp.svg' %}" id="navbar_icon"></a></ul>
-            <ul><a class="navbar_link" href="#"><img src="{% static 'images/icon/person_add-24px.svg' %}" id="navbar_icon"></a></ul>
+        <ul class="navbar_item flex_row_container" id="navbar_account_area">
+            <li><a class="navbar_link" href="#"><img src="{% static 'images/icon/login-black-18dp.svg' %}" id="navbar_icon"></a></li>
+            <li><a class="navbar_link" href="#"><img src="{% static 'images/icon/person_add-24px.svg' %}" id="navbar_icon"></a></li>
         </ul>
     </nav>
 
