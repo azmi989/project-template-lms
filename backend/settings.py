@@ -32,10 +32,10 @@ INSTALLED_APPS = [
 ]
 
 AUTH_USER_MODEL = 'account.User'
-AUTHENTICATION_BACKENDS = ( 
-    'django.contrib.auth.backends.AllowAllUsersModelBackend', 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.AllowAllUsersModelBackend',
     'account.backends.CaseInsensitiveModelBackend',
-    )
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -111,7 +111,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760 # 10Mb
+DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10Mb
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -129,15 +129,3 @@ TEMP = os.path.join(BASE_DIR, 'media_cdn/temp')
 
 BASE_URL = "http://127.0.0.1:8000"
 DEFAULT_CHAT_NAME = "Home"
-
-
-
-
-
-
-
-
-
-
-
-

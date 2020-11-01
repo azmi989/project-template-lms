@@ -1,0 +1,125 @@
+/* Utilities */
+:root {
+  --main-color: #242424fa;
+  --text-color: #333;
+  --navbar-text-color: #cecece;
+  --dark-navbar-background-color: #136b64cc;
+  --dark-navbar-logo-background-color: #8d2746cc;
+  --light-navbar-link-background-color: #cecececc;
+  --dark-navbar-content-background-color: #8d4727cc;
+  --dark-navbar-item-background-color: #8d8627cc;
+  --light-body-background-color: #bbbbbbcc;
+  --dark-footer-background-color: #7e7fadcc;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+  color: var(--main-color);
+  background-color: var(--light-body-background-color);
+  line-height: 1.6;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+img {
+  width: 100%;
+}
+.flex_row_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: ;
+  flex-basis: 10vh;
+}
+.flex_column_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 10vh;
+}
+#header {
+  height: 7vh;
+  width: 100%;
+}
+#body {
+  height: 66vh;
+  width: 100%;
+}
+#footer {
+  background-color: var(--dark-footer-background-color);
+  height: auto;
+  width: 100%;
+}
+/*  END Utilities */
+
+/* Navbar */
+.navbar {
+  padding: 0;
+}
+.navbar_logo {
+  padding: 0;
+}
+.navbar_logo_text {
+  height: auto;
+  width: auto;
+}
+.navbar_item {
+  padding: 0;
+}
+.navbar_link {
+  padding: 0;
+}
+.navbar_links_area {
+  padding: 0;
+}
+.navbar_links_area .flex_row {
+  padding: 0;
+}
+.navbar_account_area {
+  padding: 0;
+}
+.navbar_account_area .flex_row {
+}
+.navbar .navbar_link:hover {
+  border-radius: 30%;
+  border-bottom: 2px #202020 solid;
+}
+#navbar_icon_4 {
+  width: 4vh;
+  height: 4vh;
+}
+#navbar_icon_6 {
+  width: 6vh;
+  height: 6vh;
+}
+/*  END navbar */
+
+/* Footer */
+.footer_title {
+  color: white;
+}
+.footer_image {
+  height: 10vh;
+  width: 10vh;
+}
+.footer_text {
+  color: white;
+}
+/*  END footer */

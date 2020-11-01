@@ -1,0 +1,138 @@
+/* Utilities */
+:root {
+  --main-color: #242424fa;
+  --text-color: #333;
+  --navbar-text-color: #cecece;
+  --dark-navbar-background-color: #136b64cc;
+  --dark-navbar-logo-background-color: #8d2746cc;
+  --light-navbar-link-background-color: #cecececc;
+  --dark-navbar-content-background-color: #8d4727cc;
+  --dark-navbar-item-background-color: #8d8627cc;
+  --light-header-background-color: #dd4e4ecc;
+  --light-body-background-color: #1b6f7ecc;
+  --dark-footer-background-color: #7e7fadcc;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+  color: var(--main-color);
+  line-height: 1.6;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:not([href]):not([class]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+img {
+  width: 100%;
+}
+.flex_row_container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flex_column_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#header {
+  background-color: var(--dark-header-background-color);
+  height: 10vh;
+  width: 100%;
+}
+#body {
+  background-color: var(--dark-body-background-color);
+  height: 63vh;
+  width: 100%;
+}
+#footer {
+  background-color: var(--dark-footer-background-color);
+  height: auto;
+  width: 100%;
+}
+/*  END Utilities */
+
+/* Navbar */
+#navbar_logo {
+  justify-content: space-around;
+  height: 100%;
+  flex-basis: 15vh;
+  flex-grow: 1;
+}
+.navbar_logo_text {
+  height: auto;
+  width: auto;
+}
+.navbar_item {
+  padding: 1px;
+  margin: 1px;
+}
+.navbar_link {
+  padding: 10px;
+  margin: 10px;
+  border-bottom: 2px #ffffff solid;
+}
+#navbar_links_area {
+  justify-content: center;
+  flex-basis: auto;
+  height: 100%;
+  flex-grow: 20;
+}
+#navbar_account_area {
+  justify-content: space-around;
+  height: 100%;
+  flex-basis: 20vh;
+  flex-grow: 2;
+}
+#navbar_icon {
+  width: 5vh;
+  height: 5vh;
+}
+.navbar_link:hover {
+  border-bottom: 2px #202020 solid;
+}
+/*  END navbar */
+
+/* Footer */
+.footer_title {
+  color: white;
+}
+.footer_image {
+  height: 10vh;
+  width: 10vh;
+}
+.footer_text {
+  color: white;
+}
+/*  END footer */
