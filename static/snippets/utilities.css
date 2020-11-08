@@ -1,0 +1,54 @@
+/*Utilities*/
+body {
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 7vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e4e0e0;
+  box-shadow: 0px 15px 60px 7px rgba(0, 0, 0, 0.87);
+}
+
+main {
+  height: auto;
+  display: flex;
+  top: 7vh;
+  left: 0;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  background-color: #775b5b5b;
+  border-radius: 50px;
+  margin: 10px;
+}
+endSection {
+  width: 100%;
+  height: 30vh;
+  margin: 0;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  top: 80vh;
+  left: 0;
+  position: fixed;
+  height: 20vh;
+  width: 100%;
+  background-color: #10292b;
+}

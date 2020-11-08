@@ -1,46 +1,80 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en"
-dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible"
-        content="IE=edge">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>{% block title %}{% endblock %}</title>
 
     <!-- Base css -->
-    <link type="text/css" href="{% static 'snippets/base.css' %}" rel="stylesheet">
-    
+    <link
+      type="text/css"
+      href="{% static 'snippets/base.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- utilities css -->
+    <link
+      type="text/css"
+      href="{% static 'snippets/utilities.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- Navbar css -->
+    <link
+      type="text/css"
+      href="{% static 'snippets/navbar.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- Dropdown css -->
+    <link
+      type="text/css"
+      href="{% static 'snippets/dropdown.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- Main css -->
+    <link
+      type="text/css"
+      href="{% static 'snippets/main.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- Footer css -->
+    <link
+      type="text/css"
+      href="{% static 'snippets/footer.css' %}"
+      rel="stylesheet"
+    />
+
     <!-- Page css -->
     {% block css %}{% endblock %}
-</head>
+  </head>
 
-<body>
-    
+  <body>
     <!-- Header -->
     {% include 'snippets/header.html' %}
 
-    <main >
-        <div class="main"></div>
-    <!-- Block -->
-        {% block content %}{% endblock content %}
+    <main>
+      <div class="main"></div>
+      <!-- Block -->
+      {% block content %}{% endblock content %}
     </main>
 
-
     <!-- Footer -->
-    {% include 'snippets/footer.html' %}
-
-
-    {% block scripts %}{% endblock %}
+    {% include 'snippets/footer.html' %} {% block scripts %}{% endblock %}
     <!-- jQuery -->
     <script src="{% static 'js/jquery.min.js' %}"></script>
 
     <!-- Base js -->
     <script src="{% static 'snippets/base.js' %}"></script>
 
-</body>
-
+    <!-- Navbar js -->
+    <script src="{% static 'snippets/navbar.js' %}"></script>
+  </body>
 </html>

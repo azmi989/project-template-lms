@@ -1,5 +1,5 @@
 {% load static %}
-<nav>
+<nav class="nav" id="nav">
   <div class="nav_brand">
     <div class="nav_logo">
       <img src="{% static 'images/logo/black-100@2x.png' %}" class="logo_img" />
@@ -8,49 +8,39 @@
         <h3 class="logo_text">LMS</h3>
     </div>
   </div>
+  <div class="collapse" id="collapse">
+    <ul class="links_area">
+      <li class="nav_link"><a href="#">test</a></li>
+      <li class="nav_link"><a href="#">test</a></li>
+      <li class="nav_link"><a href="#">test</a></li>
+    </ul>
 
-  <ul class="links_area">
-    <li><a class="link" href="#">test</a></li>
-    <li><a class="link" href="#">test</a></li>
-    <li><a class="link" href="#">test</a></li>
-  </ul>
-{% if request.user.is_authenticated %}
+    {% if request.user.is_authenticated %}
+    <div class="account_area">
+      <a href="#">
+          <img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search">
+        </a>
+    </div>
+    {% else %}
+    <di class="account_area">
+      <a href="#" class="">
+          <img class="nav_icon" src="{% static 'images/icon/login-black-18dp.svg' %}" alt="search">
+        </a>
 
-  <div class="account_area">
-    <a href="#" class="link">
-        <img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search">
-      </a>
-  </div>
+        <a href="#" class="">
+            <img class="nav_icon" src="{% static 'images/icon/person_add-24px.svg' %}" alt="search">
+          </a>
+    </di>
+    {% endif %}
 
-  <div class="search_collapsebtn_area">
-      <a href="#" class="link">
+      </div>
+  <div class="nav_btn">
+      <a href="#" class="search_icon">
           <img class="nav_icon" src="{% static 'images/icon/search-black-18dp.svg' %}" alt="search">
         </a>
-        <a href="#" class="link">
+        <a href="javascript:void(0);" class="menu_icon" onclick="collapseMenu()">
             <img class="nav_icon" src="{% static 'images/icon/short_text-black-18dp.svg' %}" alt="search">
           </a>
   </div>
-</nav>
-{% else %}
-
-  <div class="account_area">
-    <a href="#" class="link">
-        <img class="nav_icon" src="{% static 'images/icon/login-black-18dp.svg' %}" alt="search">
-      </a>
-
-      <a href="#" class="link">
-          <img class="nav_icon" src="{% static 'images/icon/person_add-24px.svg' %}" alt="search">
-        </a>
-  </div>
-
-  <div class="search_collapsebtn_area">
-      <a href="#" class="link">
-          <img class="nav_icon" src="{% static 'images/icon/search-black-18dp.svg' %}" alt="search">
-        </a>
-        <a href="#" class="link">
-            <img class="nav_icon" src="{% static 'images/icon/short_text-black-18dp.svg' %}" alt="search">
-          </a>
-  </div>
-  {% endif %}
 </nav>
 <!-- END header -->
