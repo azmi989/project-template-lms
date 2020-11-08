@@ -1,14 +1,12 @@
 /*this is home css*/
-.home {
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  flex-wrap: nowrap;
+
+#main {
+  padding: 10px;
 }
-.home_section_1 {
-  justify-content: center;
-  height: 30vh;
-  width: 100%;
-  flex-basis: 15vh;
-  flex-grow: 1;
+.marketing {
+  margin: 10px;
+  padding: 10px;
+}
+#carousel-img {
+  height: 50vh;
 }

@@ -1,19 +1,56 @@
 {% load static %}
+<nav>
+  <div class="nav_brand">
+    <div class="nav_logo">
+      <img src="{% static 'images/logo/black-100@2x.png' %}" class="logo_img" />
+    </div>
+    <div class="nav_text">
+        <h3 class="logo_text">LMS</h3>
+    </div>
+  </div>
 
-    <nav class="flex_row_container" id="header">
-        <div class="navbar_item flex_row_container" id="navbar_logo">
-            <img class="" src="{% static 'images/logo/black-70@2x.png' %}" id="navbar_icon">
-            <h1 class="">LMS</h1>
-        </div>
-        <ul class="navbar_item flex_row_container navbar_item" id="navbar_links_area">
-            <li><a class="navbar_link" href="#">Home</a></li>
-            <li><a class="navbar_link" href="#">Profile</a></li>
-            <li><a class="navbar_link" href="#">About us</a></li>
-        </ul>
-        <ul class="navbar_item flex_row_container" id="navbar_account_area">
-            <li><a class="navbar_link" href="#"><img src="{% static 'images/icon/login-black-18dp.svg' %}" id="navbar_icon"></a></li>
-            <li><a class="navbar_link" href="#"><img src="{% static 'images/icon/person_add-24px.svg' %}" id="navbar_icon"></a></li>
-        </ul>
-    </nav>
+  <ul class="links_area">
+    <li><a class="link" href="#">test</a></li>
+    <li><a class="link" href="#">test</a></li>
+    <li><a class="link" href="#">test</a></li>
+  </ul>
+{% if request.user.is_authenticated %}
 
+  <div class="account_area">
+    <a href="#" class="link">
+        <img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search">
+      </a>
+  </div>
+
+  <div class="search_collapsebtn_area">
+      <a href="#" class="link">
+          <img class="nav_icon" src="{% static 'images/icon/search-black-18dp.svg' %}" alt="search">
+        </a>
+        <a href="#" class="link">
+            <img class="nav_icon" src="{% static 'images/icon/short_text-black-18dp.svg' %}" alt="search">
+          </a>
+  </div>
+</nav>
+{% else %}
+
+  <div class="account_area">
+    <a href="#" class="link">
+        <img class="nav_icon" src="{% static 'images/icon/login-black-18dp.svg' %}" alt="search">
+      </a>
+
+      <a href="#" class="link">
+          <img class="nav_icon" src="{% static 'images/icon/person_add-24px.svg' %}" alt="search">
+        </a>
+  </div>
+
+  <div class="search_collapsebtn_area">
+      <a href="#" class="link">
+          <img class="nav_icon" src="{% static 'images/icon/search-black-18dp.svg' %}" alt="search">
+        </a>
+        <a href="#" class="link">
+            <img class="nav_icon" src="{% static 'images/icon/short_text-black-18dp.svg' %}" alt="search">
+          </a>
+  </div>
+  {% endif %}
+</nav>
 <!-- END header -->
