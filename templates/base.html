@@ -62,12 +62,16 @@
 
     <main>
       <div class="main"></div>
-      <!-- Block -->
+      <!-- Page -->
       {% block content %}{% endblock content %}
     </main>
 
     <!-- Footer -->
-    {% include 'snippets/footer.html' %} {% block scripts %}{% endblock %}
+    {% include 'snippets/footer.html' %} 
+    
+    <!-- Page js -->
+    {% block scripts %}{% endblock %}
+
     <!-- jQuery -->
     <script src="{% static 'js/jquery.min.js' %}"></script>
 

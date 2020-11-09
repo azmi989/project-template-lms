@@ -1,10 +1,5 @@
 /* Footer */
-
-.footer_section {
-  margin: 0vh 2vh;
-  height: 100%;
-  width: 25%;
-  background-color: #1b4447;
+footer {
+  background-color: #9bc2c5;
 }
-
 /* END footer */
