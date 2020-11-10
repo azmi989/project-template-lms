@@ -1,8 +1,8 @@
 function collapseMenu(){
     var x = document.getElementById("collapse");
-    if (x.className === "collapse") {
-      x.className += " show";
+    if (x.id === "collapse") {
+      x.id += " show";
     } else {
-      x.className = "collapse";
+      x.Id = "collapse";
     }
   } 

@@ -2,9 +2,9 @@
 <nav class="navbar_container" id="nav">
   <div class="nav_brand">
     <div class="nav_logo">
-      <img src="{% static 'images/logo/black-100@2x.png' %}"/>
+      <img class="logo_img" src="{% static 'images/logo/black-100@2x.png' %}"/>
     </div>
-    <div>
+    <div class="nav_text">
         <h3 class="">LMS</h3>
     </div>
   </div>
@@ -13,27 +13,14 @@
       <li class="nav_link"><a href="#">test</a></li>
       <li class="nav_link"><a href="#">test</a></li>
       <li class="nav_link"><a href="#">test</a></li>
+      {% if request.user.is_authenticated %}
+      <li class="nav_link account_area"><img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search"></a></li>
+      {% else %}
+      <li class="nav_link account_area"><img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search"></a></li>
+      <li class="nav_link account_area"><img class="nav_icon" src="{% static 'images/icon/person_add-24px.svg' %}" alt="search"></a></li>
+      {% endif %}
     </ul>
-
-    {% if request.user.is_authenticated %}
-    <div class="account_area">
-      <a href="#">
-          <img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search">
-        </a>
-    </div>
-    {% else %}
-    <di class="account_area">
-      <a href="#" class="">
-          <img class="nav_icon" src="{% static 'images/icon/login-black-18dp.svg' %}" alt="search">
-        </a>
-
-        <a href="#" class="">
-            <img class="nav_icon" src="{% static 'images/icon/person_add-24px.svg' %}" alt="search">
-          </a>
-    </di>
-    {% endif %}
-
-      </div>
+  </div>
   <div class="nav_btn">
       <a href="#" class="search_icon">
           <img class="nav_icon" src="{% static 'images/icon/search-black-18dp.svg' %}" alt="search">
