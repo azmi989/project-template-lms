@@ -1,21 +1,13 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}LMS | Home{% endblock %}
-
-{% block css %}
-<link rel="stylesheet" href="{% static 'snippets/home.css' %}">
-{% endblock %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block title %}LMS |
+Home{%endblock %} {% block css %}
+<link rel="stylesheet" href="{% static 'snippets/home.css' %}" />
+{% endblock %} {% block content %}
 
 <section><div class="section_content"></div></section>
 <section><div class="section_content"></div></section>
 <section><div class="section_content"></div></section>
 <section><div class="section_content"></div></section>
 <endSection></endSection>
-{% endblock content %}
-
-{% block scripts %}
+{% endblock content %} {% block scripts %}
 <script src="{% static 'snippets/home.js' %}"></script>
 {% endblock %}

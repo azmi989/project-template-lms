@@ -3,13 +3,15 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-behavior: smooth;
 }
 body {
   display: grid;
   margin: 0 0;
   grid-template-rows: 7vh auto 30vh;
   grid-template-columns: 10px auto 10px;
-  max-width: 1400px;
+  max-width: 1100px;
+  flex-grow: 1;
 }
 div {
   display: flex;
@@ -28,7 +30,7 @@ nav {
   flex-direction: row;
   height: 7vh;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1100px;
   background-color: #e4e0e0;
   box-shadow: 0px 15px 60px 7px rgba(0, 0, 0, 0.87);
 }
@@ -56,11 +58,6 @@ section {
   border-radius: 50px;
   margin: 10px;
 }
-endSection {
-  width: 100%;
-  height: 30vh;
-  margin: 0;
-}
 footer {
   grid-row: 3/3;
   grid-column: 2/2;
@@ -70,4 +67,23 @@ footer {
   align-items: center;
   height: 30vh;
   width: 100%;
+}
+img {
+  display: block;
+}
+ul,
+li,
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: #000000;
+  width: 100%;
+  text-decoration: none;
 }

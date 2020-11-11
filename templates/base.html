@@ -67,18 +67,15 @@
     </main>
 
     <!-- Footer -->
-    {% include 'snippets/footer.html' %} 
-    
-    <!-- Page js -->
-    {% block scripts %}{% endblock %}
+    {% include 'snippets/footer.html' %}
 
     <!-- jQuery -->
     <script src="{% static 'js/jquery.min.js' %}"></script>
 
-    <!-- Base js -->
-    <script src="{% static 'snippets/base.js' %}"></script>
+    <!-- Page js -->
+    {% block scripts %}{% endblock %}
 
-    <!-- Navbar js -->
-    <script src="{% static 'snippets/navbar.js' %}"></script>
+    <!-- App js -->
+    <script src="{% static 'snippets/app.js' %}"></script>
   </body>
 </html>
