@@ -6,9 +6,18 @@
   </div>
   <div class="collapse" id="collapse">
     <ul class="links_area">
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search">test</a></li>
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search">test</a></li>
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search">test</a></li>
+      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/home-24px.svg' %}" alt="search">Home</a></li>
+      <li class="nav_link"><a href="#" style=" font-size: 11px;"><img class="nav_icon" src="{% static 'images/icon/route.svg' %}" alt="search">Learning path</a></li>
+      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/education.svg' %}" alt="search">Course</a></li>
+      {% if request.user.is_authenticated %}
+      {% if request.user.is_superuser %}
+      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/admin_panel_settings-black-18dp.svg' %}" alt="search">Dashboard</a></li>
+      {% elif request.user.is_staff %}
+      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/teacher.svg' %}" alt="search">Dashboard</a></li>
+      {% else %}
+      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/graduated.svg' %}" alt="search">Dashboard</a></li>
+      {% endif %}
+      {% endif %}
       <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/search-black-18dp.svg' %}" alt="search"></a></li>
 
       
@@ -17,12 +26,14 @@
   <div class="nav_btn">
     <ul class="links_area">
       {% if request.user.is_authenticated %}
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search">test</a></li>
+      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search"></a></li>
+      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/notifications-24px.svg' %}" alt="search"></a></li>
+      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/email-24px.svg' %}" alt="search"></a></li>
       {% else %}
       <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search">test</a></li>
       <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/person_add-24px.svg' %}" alt="search">test</a></li>
       {% endif %}
-      <li class="nav_link menu_icon" id="menu_icon"><a href="#"><img class="nav_icon" src="{% static 'images/icon/short_text-black-18dp.svg' %}" alt="search"></a></li>
+      <li class="nav_link open" id="menu"><a id="" class="" href="#"></a></li>
     </ul>
   </div>
 </nav>

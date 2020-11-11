@@ -3,8 +3,7 @@
 .nav_brand,
 .collapse,
 .nav_btn {
-  height: 100%;
-  margin: 0 15px;
+  margin: 0 5px;
 }
 
 .nav_brand {
@@ -13,7 +12,6 @@
 }
 .collapse {
   flex-direction: row;
-  width: 100%;
 }
 .collapse_active {
   position: absolute;
@@ -25,7 +23,7 @@
 }
 .nav_btn {
   flex-direction: row;
-  width: 160px;
+  width: 140px;
 }
 
 .nav_icon {
@@ -63,121 +61,79 @@
 /* collapse */
 .links_area {
   flex-direction: row;
+  font-size: 14px;
+  text-align: center;
 }
 .nav_link {
   flex-direction: column;
   padding: 5px 5px;
-  margin: 5px 5px;
-  height: 60px;
-  width: 60px;
+  width: 100px;
 }
-.nav_link:hover {
-  background-color: #d1cacaab;
+.nav_link a {
+  height: 50px;
+  width: 100%;
+}
+.nav_link a:hover {
+  width: 100%;
+  height: 100%;
+  background-color: #00000018;
+  border-radius: 10px;
 }
 .nav_link a {
   flex-direction: column;
 }
 
+.active {
+  display: flex !important;
+  background-color: #ebdedea9;
+  position: absolute;
+  top: 7vh;
+  width: 100%;
+  height: 70vh;
+  opacity: 0.5;
+}
+
+.open {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-image: url(../images/icon/short_text-24px.svg);
+}
+.close {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-image: url(../images/icon/close-24px.svg);
+}
 /* END collapse */
 
 /* nav_buttons*/
-#menu_icon {
+#menu {
   display: none;
 }
 /* END nav_buttons*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 755px) {
   .collapse {
     display: none;
   }
   .nav_brand {
     width: 100%;
   }
+  .collapse .nav_link a,
+  .collapse .nav_link,
+  .collapse .nav_link:hover {
+    height: 70px;
+    width: 120px;
+  }
+
   .nav_btn {
     width: 100%;
   }
-  #menu_icon {
+  #menu {
     display: flex;
   }
   .collapse .links_area {
     flex-direction: column;
-  }
-}
-
-.element_animation_fadeDown {
-  animation: animationFrames ease 1s;
-  animation-iteration-count: 1;
-  transform-origin: 50% 50%;
-  animation-fill-mode: forwards; /*when the spec is finished*/
-  -webkit-animation: animationFrames ease 1s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-transform-origin: 50% 50%;
-  -webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
-  -moz-animation: animationFrames ease 1s;
-  -moz-animation-iteration-count: 1;
-  -moz-transform-origin: 50% 50%;
-  -moz-animation-fill-mode: forwards; /*FF 5+*/
-  -o-animation: animationFrames ease 1s;
-  -o-animation-iteration-count: 1;
-  -o-transform-origin: 50% 50%;
-  -o-animation-fill-mode: forwards; /*Not implemented yet*/
-  -ms-animation: animationFrames ease 1s;
-  -ms-animation-iteration-count: 1;
-  -ms-transform-origin: 50% 50%;
-  -ms-animation-fill-mode: forwards; /*IE 10+*/
-}
-
-@keyframes animationFrames {
-  0% {
-    opacity: 0;
-    transform: translate(0px, -25px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
-}
-
-@-moz-keyframes animationFrames {
-  0% {
-    opacity: 0;
-    -moz-transform: translate(0px, -25px);
-  }
-  100% {
-    opacity: 1;
-    -moz-transform: translate(0px, 0px);
-  }
-}
-
-@-webkit-keyframes animationFrames {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(0px, -25px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0px, 0px);
-  }
-}
-
-@-o-keyframes animationFrames {
-  0% {
-    opacity: 0;
-    -o-transform: translate(0px, -25px);
-  }
-  100% {
-    opacity: 1;
-    -o-transform: translate(0px, 0px);
-  }
-}
-
-@-ms-keyframes animationFrames {
-  0% {
-    opacity: 0;
-    -ms-transform: translate(0px, -25px);
-  }
-  100% {
-    opacity: 1;
-    -ms-transform: translate(0px, 0px);
   }
 }
