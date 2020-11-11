@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+LMS | Register
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'snippets/register.css' %}" />
+{% endblock %}
+{% block content %}
+<main><form class="" method="post">{% csrf_token %}
+	<img class="" src="{% static 'images/logo_250_250_transparent.png' %}" alt="codingwithmitch logo" width="72" height="72">
+	<input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+
+	<input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required>
+
+	<input type="password" name="password1" id="inputPassword1" class="form-control" placeholder="Password" required>
+
+	<input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Confirm password" required>
+
+	{% for field in registration_form %}
+	{% for error in field.errors %}
+	<p style="color: red">{{ error }}</p>
+	{% endfor %}
+	</p>
+	{% endfor %}
+	{% if registration_form.non_field_errors %}
+	<div style="color: red">
+		<p>{{registration_form.non_field_errors}}</p>
+	</div>
+
+	{% endif %}
+
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+
+	</form></main>
+{% endblock content %}

@@ -1,8 +1,8 @@
 {% load static %}
 <nav class="navbar_container">
-  <div class="nav_brand">
-    <img class="nav_logo logo_img" src="{% static 'images/logo/black-100@2x.png' %}"/>
-    <h3 class="nav_text">LMS</h3>
+  <div  class="nav_brand"><a class="nav_text" href="{% url 'home' %}">
+    <img  class="nav_logo logo_img" src="{% static 'images/logo/black-100@2x.png' %}"/>
+    <h3 class="nav_text">LMS</h3></a>
   </div>
   <div class="collapse" id="collapse">
     <ul class="links_area">
@@ -31,7 +31,7 @@
       <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/email-24px.svg' %}" alt="search"></a></li>
       {% else %}
       <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search">test</a></li>
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/person_add-24px.svg' %}" alt="search">test</a></li>
+      <li class="nav_link"><a href="{% url 'register' %}"><img class="nav_icon" src="{% static 'images/icon/person_add-24px.svg' %}" alt="search">test</a></li>
       {% endif %}
       <li class="nav_link open" id="menu"><a id="" class="" href="#"></a></li>
     </ul>
