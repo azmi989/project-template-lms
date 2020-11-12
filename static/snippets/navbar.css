@@ -27,15 +27,14 @@
 }
 
 .nav_icon {
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
 }
 
 /* nav-brand */
 .nav_logo {
   flex-direction: row;
   justify-content: flex-end;
-  flex-grow: 1;
   height: 100%;
   margin: 0 15px;
 }
@@ -46,7 +45,6 @@
 .nav_text {
   flex-direction: row;
   justify-content: flex-start;
-  flex-grow: 1;
   height: 100%;
   margin: 0 15px;
 }
@@ -72,6 +70,7 @@
 .nav_link a {
   height: 50px;
   width: 100%;
+  flex-direction: column;
 }
 .nav_link a:hover {
   width: 100%;
@@ -79,10 +78,6 @@
   background-color: #00000018;
   border-radius: 10px;
 }
-.nav_link a {
-  flex-direction: column;
-}
-
 .active {
   display: flex !important;
   background-color: #ebdedea9;

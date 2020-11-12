@@ -49,7 +49,7 @@ def user_view(request, *args, **kwargs):
         context['email'] = user.email
         context['profile_image'] = user.profile_image.url
         context['hide_email'] = user.hide_email
-        return render(request, "account/user.html", context)
+        return render(request, "user/user.html", context)
 
 
 def edit_user_view(request, *args, **kwargs):
@@ -90,7 +90,7 @@ def edit_user_view(request, *args, **kwargs):
         )
         context['form'] = form
     context['DATA_UPLOAD_MAX_MEMORY_SIZE'] = settings.DATA_UPLOAD_MAX_MEMORY_SIZE
-    return render(request, "account/edit_user.html", context)
+    return render(request, "user/edit_user.html", context)
 
 
 def logout_view(request):
@@ -126,7 +126,7 @@ def login_view(request, *args, **kwargs):
 
     context['login_form'] = form
 
-    return render(request, "account/login.html", context)
+    return render(request, "user/login.html", context)
 
 
 def get_redirect_if_exists(request):

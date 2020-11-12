@@ -1,37 +1,139 @@
 {% load static %}
 <nav class="navbar_container">
-  <div  class="nav_brand"><a class="nav_text" href="{% url 'home' %}">
-    <img  class="nav_logo logo_img" src="{% static 'images/logo/black-100@2x.png' %}"/>
-    <h3 class="nav_text">LMS</h3></a>
+  <div class="nav_brand">
+    <a class="nav_text" href="{% url 'home' %}">
+      <img
+        class="nav_logo logo_img"
+        src="{% static 'images/logo/black-100@2x.png' %}"
+    /></a>
   </div>
   <div class="collapse" id="collapse">
     <ul class="links_area">
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/home-24px.svg' %}" alt="search">Home</a></li>
-      <li class="nav_link"><a href="#" style=" font-size: 11px;"><img class="nav_icon" src="{% static 'images/icon/route.svg' %}" alt="search">Learning path</a></li>
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/education.svg' %}" alt="search">Course</a></li>
-      {% if request.user.is_authenticated %}
-      {% if request.user.is_superuser %}
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/admin_panel_settings-black-18dp.svg' %}" alt="search">Dashboard</a></li>
+      <li class="nav_link tooltip">
+        <h4 class="tooltiptext">Home</h4>
+        <a href="{% url 'home' %}"
+          ><img
+            class="nav_icon"
+            src="{% static 'images/icon/home-24px.svg' %}"
+            alt="search"
+        />
+      </a>
+      </li>
+      <li class="nav_link tooltip">
+        <h4 class="tooltiptext">Learning path</h4>
+        <a href="#" style="font-size: 11px"
+          ><img
+            class="nav_icon"
+            src="{% static 'images/icon/route.svg' %}"
+            alt="search"
+          /></a
+        >
+      </li>
+      <li class="nav_link tooltip">
+        <h4 class="tooltiptext">Course</h4>
+        <a href="#"
+          ><img
+            class="nav_icon"
+            src="{% static 'images/icon/education.svg' %}"
+            alt="search"
+          /></a
+        >
+      </li>
+      {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
+      <li class="nav_link tooltip"><h4 class="tooltiptext">Admin dashboard</h4>
+        <a href="#"
+          ><img
+            class="nav_icon"
+            src="{% static 'images/icon/admin_panel_settings-black-18dp.svg' %}"
+            alt="search"
+          /></a
+        >
+      </li>
       {% elif request.user.is_staff %}
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/teacher.svg' %}" alt="search">Dashboard</a></li>
+      <li class="nav_link tooltip"><h4 class="tooltiptext">Teacher dashboard</h4>
+        <a href="#"
+          ><img
+            class="nav_icon"
+            src="{% static 'images/icon/teacher.svg' %}"
+            alt="search"
+          />Dashboard</a
+        >
+      </li>
       {% else %}
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/graduated.svg' %}" alt="search">Dashboard</a></li>
-      {% endif %}
-      {% endif %}
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/search-black-18dp.svg' %}" alt="search"></a></li>
-
-      
+      <li class="nav_link tooltip"><h4 class="tooltiptext">Student dashboard</h4>
+        <a href="#"
+          ><img
+            class="nav_icon"
+            src="{% static 'images/icon/graduated.svg' %}"
+            alt="search"
+          /></a
+        >
+      </li>
+      {% endif %} {% endif %}
+      <li class="nav_link">
+        <a href="#"
+          ><img
+            class="nav_icon"
+            src="{% static 'images/icon/search-black-18dp.svg' %}"
+            alt="search"
+        /></a>
+      </li>
     </ul>
   </div>
   <div class="nav_btn">
     <ul class="links_area">
       {% if request.user.is_authenticated %}
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search"></a></li>
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/notifications-24px.svg' %}" alt="search"></a></li>
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/email-24px.svg' %}" alt="search"></a></li>
+      <li class="nav_link dropdown">
+        <a href="{% url 'account:view' username=request.user.username %}"
+          ><img
+            class="nav_icon"
+            src="{% static 'images/icon/person-black-18dp.svg' %}"
+            alt="search"
+        /></a>
+        <ul class="dropdown_content">
+          <li>
+            <a class="" href="{% url 'account:edit' username=request.user.username %}">Edit profile</a>
+          </li>
+          <li>
+            <a class="" href="{% url 'logout' %}">Logout</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav_link">
+        <a href="#"
+          ><img
+            class="nav_icon"
+            src="{% static 'images/icon/notifications-24px.svg' %}"
+            alt="search"
+        /></a>
+      </li>
+      <li class="nav_link">
+        <a href="#"
+          ><img
+            class="nav_icon"
+            src="{% static 'images/icon/email-24px.svg' %}"
+            alt="search"
+        /></a>
+      </li>
       {% else %}
-      <li class="nav_link"><a href="#"><img class="nav_icon" src="{% static 'images/icon/person-black-18dp.svg' %}" alt="search">test</a></li>
-      <li class="nav_link"><a href="{% url 'register' %}"><img class="nav_icon" src="{% static 'images/icon/person_add-24px.svg' %}" alt="search">test</a></li>
+      <li class="nav_link tooltip"><h4 class="tooltiptext">Login</h4>
+        <a href="{% url 'login' %}"
+          ><img
+            class="nav_icon"
+            src="{% static 'images/icon/login-black-18dp.svg' %}"
+            alt="search"
+          /></a
+        >
+      </li>
+      <li class="nav_link tooltip"><h4 class="tooltiptext">Register</h4>
+        <a href="{% url 'register' %}"
+          ><img
+            class="nav_icon"
+            src="{% static 'images/icon/person_add-24px.svg' %}"
+            alt="search"
+          /></a
+        >
+      </li>
       {% endif %}
       <li class="nav_link open" id="menu"><a id="" class="" href="#"></a></li>
     </ul>

@@ -7,8 +7,7 @@ LMS | Register
 {% block css %}
 <link rel="stylesheet" href="{% static 'snippets/register.css' %}" />
 {% endblock %}
-{% block content %}
-<main><form class="" method="post">{% csrf_token %}
+{% block content %}<form class="" method="post">{% csrf_token %}
 	<img class="" src="{% static 'images/logo_250_250_transparent.png' %}" alt="codingwithmitch logo" width="72" height="72">
 	<input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
 
@@ -33,5 +32,5 @@ LMS | Register
 
 	<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
 
-	</form></main>
+	</form>
 {% endblock content %}

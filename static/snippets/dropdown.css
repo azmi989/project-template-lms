@@ -82,3 +82,40 @@
     width: 30px;
   }
 }
+
+/* The container <div> - needed to position the dropdown content */
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown_content {
+  flex-direction: column;
+
+  display: none;
+  background-color: #000000;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown_content a {
+  color: #f9f9f9;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown_content a:hover {
+  background-color: #313131;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown_content {
+  position: absolute;
+  display: flex;
+  height: 150px;
+  top: 100px;
+  width: 140px;
+  left: 80%;
+}
+@media only screen and (max-width: 755px) {
+  .dropdown:hover .dropdown_content {
+    left: 26%;
+  }
+}
