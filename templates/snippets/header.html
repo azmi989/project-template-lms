@@ -16,8 +16,8 @@
             class="nav_icon"
             src="{% static 'images/icon/home-24px.svg' %}"
             alt="search"
-        />
-      </a>
+          />
+        </a>
       </li>
       <li class="nav_link tooltip">
         <h4 class="tooltiptext">Learning path</h4>
@@ -26,8 +26,7 @@
             class="nav_icon"
             src="{% static 'images/icon/route.svg' %}"
             alt="search"
-          /></a
-        >
+        /></a>
       </li>
       <li class="nav_link tooltip">
         <h4 class="tooltiptext">Course</h4>
@@ -36,21 +35,21 @@
             class="nav_icon"
             src="{% static 'images/icon/education.svg' %}"
             alt="search"
-          /></a
-        >
+        /></a>
       </li>
       {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
-      <li class="nav_link tooltip"><h4 class="tooltiptext">Admin dashboard</h4>
+      <li class="nav_link tooltip">
+        <h4 class="tooltiptext">Admin dashboard</h4>
         <a href="#"
           ><img
             class="nav_icon"
             src="{% static 'images/icon/admin_panel_settings-black-18dp.svg' %}"
             alt="search"
-          /></a
-        >
+        /></a>
       </li>
       {% elif request.user.is_staff %}
-      <li class="nav_link tooltip"><h4 class="tooltiptext">Teacher dashboard</h4>
+      <li class="nav_link tooltip">
+        <h4 class="tooltiptext">Teacher dashboard</h4>
         <a href="#"
           ><img
             class="nav_icon"
@@ -60,23 +59,33 @@
         >
       </li>
       {% else %}
-      <li class="nav_link tooltip"><h4 class="tooltiptext">Student dashboard</h4>
+      <li class="nav_link tooltip">
+        <h4 class="tooltiptext">Student dashboard</h4>
         <a href="#"
           ><img
             class="nav_icon"
             src="{% static 'images/icon/graduated.svg' %}"
             alt="search"
-          /></a
-        >
+        /></a>
       </li>
       {% endif %} {% endif %}
-      <li class="nav_link">
+      <li class="nav_link dropdown">
         <a href="#"
           ><img
             class="nav_icon"
             src="{% static 'images/icon/search-black-18dp.svg' %}"
             alt="search"
         /></a>
+        <ul class="dropdown_content" id="dropdown_content_search">
+          <li><input type="text">
+          </li>
+          <li><a href="#"
+            ><img
+              class="nav_icon"
+              src="{% static 'images/icon/search-white-18dp.svg' %}"
+              alt="search"
+          /></a></li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -92,7 +101,11 @@
         /></a>
         <ul class="dropdown_content">
           <li>
-            <a class="" href="{% url 'account:edit' username=request.user.username %}">Edit profile</a>
+            <a
+              class=""
+              href="{% url 'account:edit' username=request.user.username %}"
+              >Edit profile</a
+            >
           </li>
           <li>
             <a class="" href="{% url 'logout' %}">Logout</a>
@@ -116,23 +129,23 @@
         /></a>
       </li>
       {% else %}
-      <li class="nav_link tooltip"><h4 class="tooltiptext">Login</h4>
+      <li class="nav_link tooltip">
+        <h4 class="tooltiptext">Login</h4>
         <a href="{% url 'login' %}"
           ><img
             class="nav_icon"
             src="{% static 'images/icon/login-black-18dp.svg' %}"
             alt="search"
-          /></a
-        >
+        /></a>
       </li>
-      <li class="nav_link tooltip"><h4 class="tooltiptext">Register</h4>
+      <li class="nav_link tooltip">
+        <h4 class="tooltiptext">Register</h4>
         <a href="{% url 'register' %}"
           ><img
             class="nav_icon"
             src="{% static 'images/icon/person_add-24px.svg' %}"
             alt="search"
-          /></a
-        >
+        /></a>
       </li>
       {% endif %}
       <li class="nav_link open" id="menu"><a id="" class="" href="#"></a></li>

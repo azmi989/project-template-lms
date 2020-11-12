@@ -93,6 +93,24 @@
   background-color: #000000;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 10px;
+}
+
+/* search */
+#dropdown_content_search li {
+  width: auto;
+  margin: 0 10px;
+}
+#dropdown_content_search {
+  flex-direction: row;
+  left: 50%;
+  width: 350px;
+  height: 60px;
+}
+
+.dropdown_content input {
+  height: 25px;
+  width: 200px;
 }
 
 /* Links inside the dropdown */
