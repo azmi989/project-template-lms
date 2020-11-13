@@ -4,6 +4,8 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   opacity: 0.2;
   z-index: -1;
@@ -53,3 +55,40 @@
   background-color: #2c2c2c;
 }
 /* END login */
+
+/* User edit */
+
+.user_edit_card {
+  flex-direction: column;
+  height: 700px;
+  padding: 30px 50px;
+}
+.user_edit_form_link {
+  height: 20px;
+}
+.form_edit_user {
+  border-radius: 20px;
+  background-color: #ad9e9ead;
+  flex-direction: column;
+}
+.user_edit_form_img {
+  width: 25%;
+}
+.form_control {
+  margin: 10px 100px;
+  height: 30px;
+  width: 200px;
+}
+.user_edit_btn {
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+}
+.user_edit_btn:hover {
+  background-color: #2c2c2c;
+}
+
+.user_edit_card form {
+  flex-direction: column;
+}
+/* END user edit */

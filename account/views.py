@@ -45,11 +45,26 @@ def user_view(request, *args, **kwargs):
         return HttpResponse("Something went wrong.")
     if user:
         context['id'] = user.id
-        context['username'] = user.username
         context['email'] = user.email
-        context['profile_image'] = user.profile_image.url
+        context['username'] = user.username
+        context['first_name'] = user.first_name
+        context['middle_name'] = user.middle_name
+        context['last_name'] = user.last_name
+        context['address'] = user.address
+        context['profile_image'] = user.profile_image
+        context['is_active'] = user.is_active
+        context['is_staff'] = user.is_staff
+        context['is_superuser'] = user.is_superuser
         context['hide_email'] = user.hide_email
-        return render(request, "user/user.html", context)
+        context['hide_phone'] = user.hide_phone
+        context['phone_number'] = user.phone_number
+        context['gender'] = user.gender
+        context['bio'] = user.bio
+        context['facebook_link'] = user.facebook_link
+        context['twitter_link'] = user.twitter_link
+        context['profession'] = user.profession
+        context['skills'] = user.skills
+    return render(request, "user/user.html", context)
 
 
 def edit_user_view(request, *args, **kwargs):
@@ -73,8 +88,23 @@ def edit_user_view(request, *args, **kwargs):
                                       "id": user.pk,
                                       "email": user.email,
                                       "username": user.username,
+                                      "first_name": user.first_name,
+                                      "middle_name": user.middle_name,
+                                      "last_name": user.last_name,
+                                      "address": user.address,
                                       "profile_image": user.profile_image,
+                                      "is_active": user.is_active,
+                                      "is_staff": user.is_staff,
+                                      "is_superuser": user.is_superuser,
                                       "hide_email": user.hide_email,
+                                      "hide_phone": user.hide_phone,
+                                      "phone_number": user.phone_number,
+                                      "gender": user.gender,
+                                      "bio": user.bio,
+                                      "facebook_link": user.facebook_link,
+                                      "twitter_link": user.twitter_link,
+                                      "profession": user.profession,
+                                      "skills": user.skills,
                                   }
                                   )
             context['form'] = form
@@ -84,8 +114,23 @@ def edit_user_view(request, *args, **kwargs):
                 "id": user.pk,
                 "email": user.email,
                 "username": user.username,
+                "first_name": user.first_name,
+                "middle_name": user.middle_name,
+                "last_name": user.last_name,
+                "address": user.address,
                 "profile_image": user.profile_image,
+                "is_active": user.is_active,
+                "is_staff": user.is_staff,
+                "is_superuser": user.is_superuser,
                 "hide_email": user.hide_email,
+                "hide_phone": user.hide_phone,
+                "phone_number": user.phone_number,
+                "gender": user.gender,
+                "bio": user.bio,
+                "facebook_link": user.facebook_link,
+                "twitter_link": user.twitter_link,
+                "profession": user.profession,
+                "skills": user.skills,
             }
         )
         context['form'] = form

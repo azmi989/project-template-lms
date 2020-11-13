@@ -1,15 +1,25 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block title %} LMS |
+{{request.user}} {% endblock %} {% block content %}
 
-{% block title %}
-LMS | {{request.user}}
-{% endblock %}
+<h3>{{id}}</h3>
+<h3>{{email}}</h3>
+<h3>{{username}}</h3>
+<h3>{{first_name}}</h3>
+<h3>{{middle_name}}</h3>
+<h3>{{last_name}}</h3>
+<h3>{{address}}</h3>
+<img src="{{profile_image.url}}" alt="">
+<h3>{{is_active}}</h3>
+<h3>{{is_staff}}</h3>
+<h3>{{is_superuser}}</h3>
+<h3>{{hide_email}}</h3>
+<h3>{{hide_phone}}</h3>
+<h3>{{phone_number}}</h3>
+<h3>{{gender}}</h3>
+<h3>{{bio}}</h3>
+<h3>{{facebook_link}}</h3>
+<h3>{{twitter_link}}</h3>
+<h3>{{profession}}</h3>
+<h3>{{skills}}</h3>
 
-{% block content %}
-
-<h1>{{request.user}}</h1>
-
-{% block scripts %}
-{% endblock %}
-
-{% endblock content %}
+{% block scripts %} {% endblock %} {% endblock content %}
